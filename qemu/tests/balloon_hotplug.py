@@ -22,7 +22,7 @@ def run(test, params, env):
     :param env:    Dictionary with test environment.
     """
     pause = float(params.get("virtio_balloon_pause", 3.0))
-    idx = 0
+    idx = int(params.get("idx", 0))
     err = ""
     vm = env.get_vm(params["main_vm"])
     vm.verify_alive()
